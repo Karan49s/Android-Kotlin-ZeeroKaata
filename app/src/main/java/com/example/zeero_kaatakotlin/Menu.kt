@@ -21,12 +21,12 @@ class Menu : AppCompatActivity() {
         val intent = Intent(this@Menu, MainActivity::class.java)
 
         single.setOnClickListener() {
-            intent.putExtra("mode",0)
+            intent.putExtra("mode",1)
             startActivity( intent )
         }
 
         multi.setOnClickListener() {
-            intent.putExtra("mode",1)
+            intent.putExtra("mode",0)
             startActivity( intent )
         }
 
