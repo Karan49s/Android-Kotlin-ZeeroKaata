@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,38 +7,47 @@
     tools:context=".Menu"
     android:background="@color/colorPrimary"
     android:orientation="vertical"
-    android:gravity="center|bottom">
+    android:gravity="center|center_vertical">
 
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/title"
-        android:paddingHorizontal="60dp"
-        android:paddingBottom="120dp"
-        />
+        android:paddingTop="70dp"
+        android:paddingHorizontal="40dp"
+        android:src="@drawable/title" />
 
-    <Button
-        android:id="@+id/btnSingle"
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Single-Player"
-        android:textSize="25sp"
-        android:textColor="#ffffff"
-        android:textStyle="bold"
-        android:layout_marginVertical="30dp"
-        android:layout_marginHorizontal="30dp"
-        android:background="@color/button"/>
-    <Button
-        android:id="@+id/btnMulti"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:textColor="#ffffff"
-        android:textSize="25sp"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginBottom="70dp"
-        android:text="Multi-player"
-        android:background="@color/button"/>
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/btnSingle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Single-Player"
+            android:textSize="25sp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:layout_marginVertical="30dp"
+            android:layout_marginHorizontal="30dp"
+            android:background="@drawable/custom_button"/>
+        <Button
+            android:id="@+id/btnMulti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:textSize="25sp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginBottom="70dp"
+            android:text="Multi-player"
+            android:background="@drawable/custom_button" />
 
-</LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+</RelativeLayout>

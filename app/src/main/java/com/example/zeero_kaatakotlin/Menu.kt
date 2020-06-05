@@ -15,18 +15,18 @@ class Menu : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
 
-        single = findViewById(R.id.btnMulti)
+        single = findViewById(R.id.btnSingle)
         multi = findViewById(R.id.btnMulti)
 
-        val i = Intent(this@Menu, MainActivity::class.java)
+        val intent = Intent(this@Menu, MainActivity::class.java)
 
         single.setOnClickListener() {
-            i.putExtra("mode",0)
+            intent.putExtra("mode",0)
             startActivity( intent )
         }
 
         multi.setOnClickListener() {
-            i.putExtra("mode",1)
+            intent.putExtra("mode",1)
             startActivity( intent )
         }
 
